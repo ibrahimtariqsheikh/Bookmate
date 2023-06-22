@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "580589411646",
+    "project_id": "book-mate-50bbd",
+    "storage_bucket": "book-mate-50bbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580589411646:android:fce69c52cd58f3d989a06f",
+        "android_client_info": {
+          "package_name": "com.example.book_mate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "580589411646-vf5eodqfiptb1hhppal2nea5oqe3u4av.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMIzPeh84CXikUu6Lt07ciVgxmXnoqf1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "580589411646-5rudvrlsul5segs6jthab4vcrd01o68b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
