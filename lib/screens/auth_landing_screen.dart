@@ -31,12 +31,12 @@ class AuthLandingScreen extends StatelessWidget {
                 alignment: WrapAlignment.center,
                 children: [
                   Text(
-                    'Unleash the power of reading with our',
+                    'Unleash the power of reading with',
                     style: Theme.of(context).textTheme.bodyMedium,
                     textAlign: TextAlign.center,
                   ),
                   Text(
-                    'Ebook App',
+                    'Bookmate',
                     style: Theme.of(context).textTheme.bodyLarge,
                     textAlign: TextAlign.center,
                   ),

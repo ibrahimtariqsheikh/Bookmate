@@ -28,6 +28,10 @@ class LogInCubit extends Cubit<LogInState> {
     }
   }
 
+  Future<void> logOut() async {
+    await authRepository.logOut();
+  }
+
   Future<void> logInWithGoogle() async {
     emit(state.copyWith(
       logInStatus:LogInStatus.submitting,

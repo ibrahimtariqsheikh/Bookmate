@@ -1,7 +1,10 @@
+import 'package:book_mate/blocs/login/cubit/login_cubit.dart';
+import 'package:book_mate/blocs/signup/cubit/signup_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-enum SocialAuthCalledFrom { signin, signUp }
+enum SocialAuthCalledFrom { login, signUp }
 
 class SocialSignIn extends StatelessWidget {
   final SocialAuthCalledFrom calledFrom;
@@ -22,7 +25,12 @@ class SocialSignIn extends StatelessWidget {
         width: size.width * .20,
         icon: FontAwesomeIcons.facebook,
         action: () {
-     
+     if (calledFrom == SocialAuthCalledFrom.login) {
+            context.read<LogInCubit>().logInWithFacebook();
+          }
+          if (calledFrom == SocialAuthCalledFrom.signUp) {
+            context.read<SignUpCubit>().signUpWithFacebook();
+          }
         },
       ),
       const Spacer(),
@@ -31,7 +39,12 @@ class SocialSignIn extends StatelessWidget {
         width: size.width * .20,
         icon: FontAwesomeIcons.google,
         action: () {
-       
+         if (calledFrom == SocialAuthCalledFrom.login) {
+            context.read<LogInCubit>().logInWithGoogle();
+          }
+          if (calledFrom == SocialAuthCalledFrom.signUp) {
+            context.read<SignUpCubit>().signUpWithGoogle();
+          }
         },
       ),
       const Spacer(),
@@ -40,12 +53,12 @@ class SocialSignIn extends StatelessWidget {
         width: size.width * .20,
         icon: FontAwesomeIcons.twitter,
         action: () {
-          // if (calledFrom == SocialSignCalledFrom.signin) {
-          //   context.read<SignInCubit>().signInWithTwitter();
-          // }
-          // if (calledFrom == SocialSignCalledFrom.signUp) {
-          //   context.read<SignUpCubit>().signInWithTwitter();
-          // }
+          if (calledFrom == SocialAuthCalledFrom.login) {
+            context.read<LogInCubit>().logInWithTwitter();
+          }
+          if (calledFrom == SocialAuthCalledFrom.signUp) {
+            context.read<SignUpCubit>().signUpWithTwitter();
+          }
         },
       ),
       const Spacer(

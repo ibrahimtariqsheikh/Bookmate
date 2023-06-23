@@ -1,11 +1,11 @@
 import 'package:book_mate/blocs/auth/bloc/auth_bloc.dart';
 import 'package:book_mate/blocs/auth/repository/auth_repository.dart';
 import 'package:book_mate/blocs/login/cubit/login_cubit.dart';
-import 'package:book_mate/blocs/signup/signup_cubit.dart';
+import 'package:book_mate/blocs/signup/cubit/signup_cubit.dart';
 import 'package:book_mate/config/app_theme.dart';
 import 'package:book_mate/config/build_routes.dart';
 import 'package:book_mate/firebase_options.dart';
-import 'package:book_mate/screens/auth_landing_screen.dart';
+import 'package:book_mate/screens/splash_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -65,13 +65,13 @@ class MyApp extends StatelessWidget {
           ),
         ],
         child: MaterialApp(
-          title: 'Book Mate',
+          title: 'Bookmate',
           theme: AppTheme.lightTheme(),
           darkTheme: AppTheme.darkTheme(),
           themeMode: ThemeMode.dark,
           debugShowCheckedModeBanner: false,
           onGenerateRoute: buildAppRoutes,
-          home: const AuthLandingScreen(),
+          home: const SplashScreen(),
         ),
       ),
     );

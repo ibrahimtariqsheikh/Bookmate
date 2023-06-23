@@ -18,4 +18,4 @@ class AuthStateChangedEvent extends AuthEvent {
   List<Object?> get props => [user];
 }
 
-class SignOutRequestedEvent extends AuthEvent {}
+class LogOutRequestedEvent extends AuthEvent {}

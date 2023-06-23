@@ -95,7 +95,7 @@ keyboardType: (widget.keyboardType!=null)?TextInputType.emailAddress:widget.keyb
                   fontSize: 14,
                   fontWeight: FontWeight.w100,
                 ),
-                errorStyle: GoogleFonts.urbanist(
+                errorStyle: GoogleFonts.dmSans(
                   textStyle: Theme.of(context).textTheme.headlineSmall!,
                   color: Colors.red,
                   fontSize: 16,

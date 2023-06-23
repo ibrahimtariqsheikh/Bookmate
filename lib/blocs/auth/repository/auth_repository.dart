@@ -240,7 +240,7 @@ age:age,
     }
   }
 
-  Future<void> signOut() async {
+  Future<void> logOut() async {
     await firebaseAuth.signOut();
   }
 }

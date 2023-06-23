@@ -1,4 +1,4 @@
-import 'package:book_mate/blocs/signup/signup_cubit.dart';
+import 'package:book_mate/blocs/signup/cubit/signup_cubit.dart';
 import 'package:book_mate/screens/home_page.dart';
 import 'package:book_mate/screens/login_screen.dart';
 import 'package:book_mate/widgets/custom_button.dart';

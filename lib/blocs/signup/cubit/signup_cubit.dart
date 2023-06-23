@@ -25,11 +25,8 @@ class SignUpCubit extends Cubit<SignUpState> {
     }
   }
 
-  void updateSelectedGender(String gender) {
-    emit(state.copyWith(selectedGender: gender));
-  }
 
-  Future<void> signInWithGoogle() async {
+  Future<void> signUpWithGoogle() async {
     emit(state.copyWith(
       signUpStatus: SignUpStatus.submitting,
     ));
@@ -43,7 +40,7 @@ class SignUpCubit extends Cubit<SignUpState> {
     }
   }
 
-  Future<void> signInWithTwitter() async {
+  Future<void> signUpWithTwitter() async {
     emit(state.copyWith(
       signUpStatus: SignUpStatus.submitting,
     ));
@@ -57,7 +54,7 @@ class SignUpCubit extends Cubit<SignUpState> {
     }
   }
 
-  Future<void> signInWithFacebook() async {
+  Future<void> signUpWithFacebook() async {
     emit(state.copyWith(
       signUpStatus: SignUpStatus.submitting,
     ));

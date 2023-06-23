@@ -1,4 +1,5 @@
 import 'package:book_mate/blocs/login/cubit/login_cubit.dart';
+import 'package:book_mate/screens/home_page.dart';
 import 'package:book_mate/screens/signup_screen.dart';
 import 'package:book_mate/widgets/custom_button.dart';
 import 'package:book_mate/widgets/custom_text_field.dart';
@@ -42,8 +43,8 @@ class LoginScreenState extends State<LoginScreen> {
         errorDialog(context, state.error);
       }
       if (state.logInStatus == LogInStatus.success) {
-        // Navigator.pushNamedAndRemoveUntil(
-        //     context, TabBarPage.routeName, (route) => false);
+        Navigator.pushNamedAndRemoveUntil(
+            context, HomePage.routeName, (route) => false);
       }
     }, builder: (context, state) {
       return GestureDetector(
@@ -184,7 +185,7 @@ class LoginScreenState extends State<LoginScreen> {
                         ),
                         const Spacer(),
                         const SocialSignIn(
-                            calledFrom: SocialAuthCalledFrom.signin),
+                            calledFrom: SocialAuthCalledFrom.login),
                         const Spacer(),
                         const SizedBox(
                           height: 20,

@@ -27,8 +27,8 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-final outlineBorderColor = Theme.of(context).colorScheme.tertiary;
-final outlineTextColor = Theme.of(context).colorScheme.tertiaryContainer;
+    final outlineBorderColor = Theme.of(context).colorScheme.tertiary;
+    final outlineTextColor = Theme.of(context).colorScheme.tertiaryContainer;
 
     return SizedBox(
       width: buttonWidth,
@@ -55,12 +55,15 @@ final outlineTextColor = Theme.of(context).colorScheme.tertiaryContainer;
               )
             : const CircularProgressIndicator.adaptive(),
         style: ElevatedButton.styleFrom(
+          elevation: 0,
           backgroundColor: isOutlined
               ? Theme.of(context).scaffoldBackgroundColor
               : buttonColor,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(borderRadius)),
-          side: isOutlined ? BorderSide(color: outlineBorderColor, width: 1) : null,
+          side: isOutlined
+              ? BorderSide(color: outlineBorderColor, width: 1)
+              : null,
         ),
       ),
     );
